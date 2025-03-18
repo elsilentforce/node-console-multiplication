@@ -6,14 +6,20 @@
   "scripts": {
     "dev": "nodemon --base 10",
     "dev:nodemon": "nodemon -b 7",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "author": "Patricio Tapia",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.13.1",
     "@types/yargs": "^17.0.33",
+    "jest": "^29.7.0",
     "nodemon": "^3.1.9",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
