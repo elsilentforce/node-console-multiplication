@@ -11,6 +11,10 @@ describe('SaveFileUseCase', ()=>{
     fileDestination: 'custom-outputs/file-destination',
     fileName: 'custom-table-name'
   }
+
+  beforeEach(()=>{
+    jest.clearAllMocks();
+  });
   
   afterEach(()=>{
     const existsDefaultOutput = fs.existsSync('outputs');
@@ -60,7 +64,7 @@ describe('SaveFileUseCase', ()=>{
       () => { throw new Error('Error creating File'); }
     );
     const result = saveFile.execute(defaultOptions);
-    expect(result).toBe(false);
+    expect(result).toBe(false)
     writeFileSyncSpy.mockRestore();
   });
 });

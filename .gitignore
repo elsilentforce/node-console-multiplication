@@ -1,2 +1,5 @@
-node_modules
-outputs
+coverage/
+custom-outputs/
+node_modules/
+outputs/
+test-destination/
